@@ -25,9 +25,10 @@ jobs:
 
       - name: Download dependencies
         env:
+          PIP_CMD: "pip"
           REQ_FILE: "requirements.txt"
         run: |
-          pip install --only-binary :all: -r $REQ_FILE
+          $PIP_CMD install --only-binary :all: -r $REQ_FILE
 
       - name: Initialize DB
         run: python db.py -a
