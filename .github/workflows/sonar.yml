@@ -37,7 +37,7 @@ jobs:
         run: echo "No tests defined yet"
 
       - name: Run SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@4a2b2bf7520004e3e907c2150c8cabe342a3da32
+        uses: SonarSource/sonarqube-scan-action@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
